@@ -75,6 +75,92 @@ function FormPeer({ addPeer, step }) {
           value={fields.q3}
         />
       </label>
+
+      <p>Please complete with honesty</p>
+      <p>They like it when his/her ideas are challenged</p>
+      <input
+        id="q4-1"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-1">1 - Strongly disagree</label>
+      <input
+        id="q4-2"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-2">2 - Disagree</label>
+      <input
+        id="q4-3"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-3">3 - Neither agree nor disagree</label>
+      <input
+        id="q4-4"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-4">4 - Agree</label>
+      <input
+        id="q4-5"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-5">5 - Strongly agree</label>
+
+      <p>They promptly agrees when he/she makes mistakes</p>
+      <input
+        id="q4-1"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-1">1 - Strongly disagree</label>
+      <input
+        id="q4-2"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-2">2 - Disagree</label>
+      <input
+        id="q4-3"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-3">3 - Neither agree nor disagree</label>
+      <input
+        id="q4-4"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-4">4 - Agree</label>
+      <input
+        id="q4-5"
+        name="q4-a"
+        type="radio"
+        onChange={handleChange}
+        value={fields.q4}
+      />
+      <label htmlFor="q4-5">5 - Strongly agree</label>
+
       <label htmlFor="q5">
         <p>The superpower of this person is:</p>
         <textarea
