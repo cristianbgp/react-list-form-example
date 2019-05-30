@@ -31,7 +31,7 @@ function FormPeer({ addPeer, step }) {
 
   function handleChange(event) {
     setFields({ ...fields, [event.target.name]: event.target.value });
-    console.log(event);
+    console.log(event.target);
   }
 
   return (
@@ -87,7 +87,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-a"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="1"
       />
       <label htmlFor="q4-a1">1 - Strongly disagree</label>
       <input
@@ -95,7 +95,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-a"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="2"
       />
       <label htmlFor="q4-a2">2 - Disagree</label>
       <input
@@ -103,7 +103,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-a"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="3"
       />
       <label htmlFor="q4-a3">3 - Neither agree nor disagree</label>
       <input
@@ -111,7 +111,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-a"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="4"
       />
       <label htmlFor="q4-a4">4 - Agree</label>
       <input
@@ -119,7 +119,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-a"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="5"
       />
       <label htmlFor="q4-a5">5 - Strongly agree</label>
 
@@ -129,7 +129,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-b"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="1"
       />
       <label htmlFor="q4-b1">1 - Strongly disagree</label>
       <input
@@ -137,7 +137,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-b"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="2"
       />
       <label htmlFor="q4-b2">2 - Disagree</label>
       <input
@@ -145,7 +145,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-b"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="3"
       />
       <label htmlFor="q4-b3">3 - Neither agree nor disagree</label>
       <input
@@ -153,7 +153,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-b"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="4"
       />
       <label htmlFor="q4-b4">4 - Agree</label>
       <input
@@ -161,7 +161,7 @@ function FormPeer({ addPeer, step }) {
         name="q4-b"
         type="radio"
         onChange={handleChange}
-        value={fields.q4}
+        value="5"
       />
       <label htmlFor="q4-b5">5 - Strongly agree</label>
 
