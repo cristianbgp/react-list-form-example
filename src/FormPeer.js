@@ -1,4 +1,7 @@
 import React from "react";
+import InputText from "./InputText";
+import InputTextArea from "./InputTextArea";
+import InputRadio from "./InputRadio";
 
 function FormPeer({ addPeer, step }) {
   const [fields, setFields] = React.useState({
@@ -36,92 +39,39 @@ function FormPeer({ addPeer, step }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">
-        <p>What is the name of the person that you want to give feedback?</p>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          onChange={handleChange}
-          value={fields.name}
-        />
-      </label>
-      <label htmlFor="q1">
-        <p>What are their main strengths?</p>
-        <textarea
-          id="q1"
-          name="q1"
-          type="text"
-          onChange={handleChange}
-          value={fields.q1}
-        />
-      </label>
-      <label htmlFor="q2">
-        <p>How did he contribute to the team during the gate?</p>
-        <textarea
-          id="q2"
-          name="q2"
-          type="text"
-          onChange={handleChange}
-          value={fields.q2}
-        />
-      </label>
-      <label htmlFor="q3">
-        <p>
-          What opportunities for improvement does he have? Be specific and try
-          to give examples
-        </p>
-        <textarea
-          id="q3"
-          name="q3"
-          type="text"
-          onChange={handleChange}
-          value={fields.q3}
-        />
-      </label>
+      <InputText
+        handleChange={handleChange}
+        fields={fields}
+        question={"Which is the name of your coworker?"}
+        name={"name"}
+      />
+
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={"What are their main strengths?"}
+        name={"q1"}
+      />
+
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={"How did he contribute to the team during the gate?"}
+        name={"q2"}
+      />
+
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={
+          "What opportunities for improvement does he have? Be specific and try to give examples"
+        }
+        name={"q3"}
+      />
 
       <p>Please complete with honesty</p>
-      <p>They like it when his/her ideas are challenged</p>
-      <input
-        id="q4-a1"
-        name="q4-a"
-        type="radio"
-        onChange={handleChange}
-        value="1"
-      />
-      <label htmlFor="q4-a1">1 - Strongly disagree</label>
-      <input
-        id="q4-a2"
-        name="q4-a"
-        type="radio"
-        onChange={handleChange}
-        value="2"
-      />
-      <label htmlFor="q4-a2">2 - Disagree</label>
-      <input
-        id="q4-a3"
-        name="q4-a"
-        type="radio"
-        onChange={handleChange}
-        value="3"
-      />
-      <label htmlFor="q4-a3">3 - Neither agree nor disagree</label>
-      <input
-        id="q4-a4"
-        name="q4-a"
-        type="radio"
-        onChange={handleChange}
-        value="4"
-      />
-      <label htmlFor="q4-a4">4 - Agree</label>
-      <input
-        id="q4-a5"
-        name="q4-a"
-        type="radio"
-        onChange={handleChange}
-        value="5"
-      />
-      <label htmlFor="q4-a5">5 - Strongly agree</label>
+
+      <InputRadio handleChange={handleChange} name={"q4-a"} />
 
       <p>They promptly agrees when he/she makes mistakes</p>
       <input
@@ -165,36 +115,26 @@ function FormPeer({ addPeer, step }) {
       />
       <label htmlFor="q4-b5">5 - Strongly agree</label>
 
-      <label htmlFor="q5">
-        <p>The superpower of this person is:</p>
-        <textarea
-          id="q5"
-          name="q5"
-          type="text"
-          onChange={handleChange}
-          value={fields.q5}
-        />
-      </label>
-      <label htmlFor="q6">
-        <p>Would you like to work with this person in the future? Why?</p>
-        <textarea
-          id="q6"
-          name="q6"
-          type="text"
-          onChange={handleChange}
-          value={fields.q6}
-        />
-      </label>
-      <label htmlFor="q7">
-        <p>Is there anything else you want to mention?</p>
-        <textarea
-          id="q7"
-          name="q7"
-          type="text"
-          onChange={handleChange}
-          value={fields.q7}
-        />
-      </label>
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={"The superpower of this person is:"}
+        name={"q5"}
+      />
+
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={"Would you like to work with this person in the future? Why?"}
+        name={"q6"}
+      />
+
+      <InputTextArea
+        handleChange={handleChange}
+        fields={fields}
+        question={"Is there anything else you want to mention?"}
+        name={"q7"}
+      />
 
       <button type="submit">{step < 2 ? "Next" : "Send"}</button>
     </form>

@@ -1,5 +1,6 @@
 import React from "react";
 import FormPeer from "./FormPeer";
+import OutputForm from "./OutputForm";
 
 function FormFeedback() {
   const [peers, setPeers] = React.useState([]);
@@ -19,7 +20,7 @@ function FormFeedback() {
           <FormPeer addPeer={addPeer} step={step} />
         </>
       ) : (
-        <code>{JSON.stringify(peers)}</code>
+        <OutputForm peers={peers} />
       )}
     </>
   );
