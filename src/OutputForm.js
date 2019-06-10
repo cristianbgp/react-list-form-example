@@ -1,6 +1,9 @@
 import React from "react";
+import PeersContext from "./contexts/peers";
 
-function OutputForm({ peers }) {
+function OutputForm() {
+  const peers = React.useContext(PeersContext);
+
   return (
     <>
       <h2>Results</h2>
