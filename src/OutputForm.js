@@ -6,7 +6,7 @@ function OutputForm({ peers }) {
       <h2>Results</h2>
       {peers.map(peer => {
         return (
-          <>
+          <div key={peer.id}>
             <h3>Name:</h3>
             <p>{peer.name}</p>
             <h4>
@@ -27,7 +27,7 @@ function OutputForm({ peers }) {
             <p>{peer.q6}</p>
             <h4>Is there anything else you want to mention?</h4>
             <p>{peer.q7}</p>
-          </>
+          </div>
         );
       })}
     </>

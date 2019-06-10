@@ -9,7 +9,7 @@ function InputTextArea({ handleChange, fields, question, name }) {
         name={name}
         type="text"
         onChange={handleChange}
-        value={fields.name}
+        value={fields[name]}
       />
     </label>
   );

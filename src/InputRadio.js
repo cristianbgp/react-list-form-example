@@ -1,9 +1,9 @@
 import React from "react";
 
-function InputRadio({ handleChange, name }) {
+function InputRadio({ handleChange, question, name }) {
   return (
     <>
-      <p>They like it when his/her ideas are challenged</p>
+      <p>{question}</p>
       <input
         id="q4-a1"
         name={name}
