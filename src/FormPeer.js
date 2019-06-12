@@ -66,7 +66,7 @@ function FormPeer({ addPeer }) {
         handleChange={handleChange}
         fields={fields}
         question={
-          "What opportunities for improvement does he have? Be specific and try to give examples"
+          "What oportunities for improvement does he have? Be specific and try to give examples"
         }
         name={"q3"}
       />
