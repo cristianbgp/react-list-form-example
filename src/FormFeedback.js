@@ -21,7 +21,7 @@ function FormFeedback() {
         {step < 3 ? (
           <>
             <h2>Form: {step + 1}</h2>
-            <FormPeer addPeer={addPeer} />
+            <FormPeer addPeer={addPeer} key={step} />
           </>
         ) : (
           <OutputForm />
